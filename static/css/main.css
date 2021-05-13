@@ -1,0 +1,164 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #95A78D;
+}
+
+.title {
+    grid-area: title;
+    font-style: italic;
+    font-size: 75px;
+    color: #596E4E;
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    display: grid;
+    grid-row-gap: 0;
+    grid-template-columns: 10fr 2fr 10fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "title title title"
+        "note note note"
+        "longitudeInput . latitudeInput"
+        ". button ."
+             
+}
+
+#fire {
+    margin-left: 10px;
+    color: #CE4836;
+}
+
+.tree {
+    position: absolute;
+    margin-top: 1000px;
+    width: 50px;
+    height: auto;
+}
+
+.forest {
+    position: absolute;
+    margin-top: 550px;
+    width: 750px;
+    height: auto;
+    margin-left: 1200px;
+}
+
+.longitudeInput {
+    grid-area: longitudeInput;
+    margin-left: 250px;
+    margin-top: -302px;
+}
+
+.latitudeInput {
+    grid-area: latitudeInput;
+    margin-left: 1000px;
+    margin-top: -302px;
+}
+
+#location {
+    background: none;
+    border: none;
+    border-bottom: 5px solid #B4B8BB;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 40px;
+    outline: none;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+
+.locationButton {
+    grid-area: button;
+    border: none;
+    width: 200px;
+    height: 60px;
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-left: 825px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+.locationButton:hover {
+    background-color: #3C3D3E;
+}
+
+.note {
+    grid-area: note;
+    font-size: 25px; 
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.subTitles {
+    color: #466886; 
+    font-size: 75px; 
+    margin-left: 40px;
+}
+
+
+@media screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+        .title {
+            font-size: 60px;
+        }
+
+        .note {
+            font-size: 16px;
+        }
+
+        .subTitles {
+            font-size: 60px;
+        }
+
+        #location {
+            width: 500px;
+            margin-top: 20px;
+            margin-left: 40px;
+            outline: none;
+            font-size: 35px;
+
+        }
+
+        .longitudeInput {
+            margin-left: 100px;
+            margin-top: -302px;
+        }
+        
+        .latitudeInput {
+            margin-left: 700px;
+            margin-top: -250px;
+        }
+
+        .locationButton {
+            margin-left: 575px;
+        }
+
+        .tree {
+            margin-top: 1000px;
+            width: 100px;
+            height: auto;
+        }
+        
+        .forest {
+            margin-top: 460px;
+            width: 500px;
+            height: auto;
+            margin-left: 900px;
+        }
+    }

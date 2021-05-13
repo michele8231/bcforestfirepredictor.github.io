@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    </head>
+    
+        
+       
+        <body class="content">
+
+            
+            <h1 class="title">BC Forest Fire Predictor. <i id="fire" class="fas fa-fire-alt"></i> </h1>
+           
+            <h1 class="note">
+                red dots on the map will signify a forest fire and hovering over it will give you the approximate size of the fire in hectares
+            </h1>
+           
+            <form action="\" method = "POST">
+                <div class="longitudeInput"> 
+                    <h1 class="subTitles"> longitude:</h1>
+                    <input type="text" id="location" placeholder="Enter Longitude Here" name="longitude_textbar">
+                </div>
+
+                <div class="latitudeInput"> 
+                    <h1 class="subTitles"> latitude:</h1>
+                    <input type="text" id="location" placeholder="Enter Latitude Here" name="latitude_textbar">  
+                </div>
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for msg in messages %}
+                            <p style = "margin-left:300px">{{msg}}</p>
+                        {% endfor %}
+                    {% else %}
+                        <p style = "margin-left:300px"> Note: Coordinates must correspond to a location in/near BC </p>
+                    {% endif %}
+                {% endwith %}
+
+
+           
+
+            <input class="locationButton" type="submit">
+            
+            </form>
+        </body>
+
+        <img class="forest" src="static/img/undraw_Camping_y4an.svg">
+
+        <!-- <img class="tree" src="static/img/undraw_environment_iaus.svg"> -->
+
+        
+        
+    
+</html>
